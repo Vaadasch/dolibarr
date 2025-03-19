@@ -1,0 +1,5 @@
+version: "1"
+rules:
+  - base: 20.0
+    upstream: Dolibarr/dolibarr:20.0
+    mergeMethod: rebase

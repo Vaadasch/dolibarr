@@ -1,0 +1,20 @@
+name: Trigger Docker Update
+on:
+  release:
+    types: [published]
+jobs:
+  trigger-docker-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger repository_dispatch on Vaadasch/dolibarr-docker
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          repository: Vaadasch/dolibarr-docker
+          token: ${{ secrets.TOKEN_WF_DOLIDOCKER }}
+          event-type: new_release
+          client-payload: '{"release_version": "${{ github.event.release.tag_name }}"}'
+
+      - name: Test
+        run: |-
+          echo "New release: ${{ github.event.release.tag_name }}"
