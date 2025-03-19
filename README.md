@@ -4,7 +4,7 @@ Its intent is to be able to create custom modifications on the core code of [Dol
 
 The version branches are regularly rebased on the new releases of Dolibarr/dolibarr. On this rebase, the specific commits of this repo are reapplied.
 
-As such, all the commits done here will be applied after every update of the core code of Dolibarr. Modifications will be kept accross the evolution of Dolibarr.
+As such, all the commits done here will always be (re-)applied AFTER every update of the core code of Dolibarr. Modifications will be kept accross the evolution of Dolibarr.
 
 Feel free to suggest modifications if you find yourself in need of such behavior.
 
