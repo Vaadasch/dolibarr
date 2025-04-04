@@ -264,7 +264,7 @@ function invoice_rec_prepare_head($object)
 
 	if (!getDolGlobalString('MAIN_DISABLE_CONTACTS_TAB')) {
 		$nbContact = count($object->liste_contact(-1, 'internal')) + count($object->liste_contact(-1, 'external'));
-		$head[$h][0] = DOL_URL_ROOT.'/compta/facture/contact.php?id='.urlencode((string) ($object->id)).'&model=1';
+		$head[$h][0] = DOL_URL_ROOT.'/compta/facture/contact.php?id='.urlencode((string) ($object->id)).'&object_rec=1';
 		$head[$h][1] = $langs->trans('ContactsAddresses');
 		if ($nbContact > 0) {
 			$head[$h][1] .= '<span class="badge marginleftonlyshort">'.$nbContact.'</span>';

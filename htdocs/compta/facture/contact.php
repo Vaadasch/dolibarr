@@ -56,7 +56,7 @@ $ref    = GETPOST('ref', 'alpha');
 $lineid = GETPOSTINT('lineid');
 $socid  = GETPOSTINT('socid');
 $action = GETPOST('action', 'aZ09');
-$object_rec = GETPOSTINT('object_rec')
+$object_rec = GETPOSTINT('object_rec');
 
 // Security check
 if ($user->socid) {
