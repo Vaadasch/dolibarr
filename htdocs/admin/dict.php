@@ -725,6 +725,7 @@ if ($id == DICT_TYPE_CONTACT) {
 		'order_supplier' => img_picto('', 'supplier_order', 'class="pictofixedwidth"').$langs->trans('SupplierOrder'),
 		'invoice_supplier' => img_picto('', 'supplier_invoice', 'class="pictofixedwidth"').$langs->trans('SupplierBill'),
 		'conferenceorbooth' => img_picto('', 'eventorganization', 'class="pictofixedwidth"').$langs->trans('ConferenceOrBooth'),
+		'facturerec' => img_picto('', 'bill', 'class="pictofixedwidth"').$langs->trans('RecurringInvoiceTemplate'),
 	);
 
 	complete_elementList_with_modules($elementList);

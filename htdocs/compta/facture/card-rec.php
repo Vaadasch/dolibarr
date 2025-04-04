@@ -310,7 +310,9 @@ if (empty($reshook)) {
 			$oldinvoice->fetch(GETPOSTINT('facid'));
 
 			$onlylines = GETPOST('toselect', 'array');
-
+			$object->origin = 'facture';
+			$object->origin_id = $oldinvoice->id;
+			
 			$result = $object->create($user, $oldinvoice->id, 0, $onlylines);
 			if ($result > 0) {
 				$result = $oldinvoice->delete($user, 1);
